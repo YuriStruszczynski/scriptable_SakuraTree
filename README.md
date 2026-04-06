@@ -1,6 +1,7 @@
 # Sakura Widget for Scriptable
 
 A generative sakura widget for **Scriptable on iOS**.
+![sakuraTree](https://github.com/user-attachments/assets/e0e76d55-d338-420d-b4eb-b8a256588c8c)
 
 This widget draws a stylized Japanese cherry tree directly inside Scriptable. The rendering is based on a generative growth model with:
 
