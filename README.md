@@ -173,6 +173,10 @@ The current release is mainly focused on:
 - Foundation for a future ESP32 or E-Paper port
 - Organic growth study
 
+## Thanks to
+
+<a href="https://www.exwe.de/de/softwareentwicklung/">EXWE</a>
+
 ## License
 
 MIT
