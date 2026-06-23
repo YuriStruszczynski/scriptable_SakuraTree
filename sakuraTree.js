@@ -47,6 +47,108 @@
 const STORAGE_KEY = "sakura_widget_settings_v13"
 const PHASE_KEY = "sakura_widget_phase_v13"
 
+const LANG = Device.language()
+
+const STRINGS = {
+  de: {
+    value: "Wert", save: "Speichern", cancel: "Abbrechen", back: "Zurueck",
+    done: "Fertig", quit: "Beenden", current: "Aktuell", style: "Style",
+    colors: "Farben", background: "Hintergrund", branches: "Aeste",
+    blossoms: "Blueten", sun: "Sonne", ground: "Boden",
+    sunOn: "Sonne einschalten", sunOff: "Sonne ausschalten",
+    previewSize: "Vorschaugroesse", newTreeShape: "Neue Baumform",
+    resetPhase: "Phase zuruecksetzen", loadDefaults: "Standardwerte laden",
+    settings: "Einstellungen", currentPreview: "Aktuelle Vorschau",
+    showNextStep: "Naechsten Wachstumsschritt zeigen", preview: "Vorschau",
+    currentPhase: "Aktuelle Phase", yes: "Ja", no: "Nein", hexLike: "Hex wie",
+    styleNatural: "Natuerlich", styleMinimal: "Minimalistisch",
+    styleOrnamental: "Ornamental", bareTree: "Baum ohne Blueten",
+    fallingPetals: "Fallende Blueten", maxBloom: "Maximale Bluetenpracht",
+    shootsGrowing: "Triebe wachsen", shootsDone: "Triebe fertig",
+    dotOnShoot: "Punkt an Trieb", smallBud: "Kleine Knospe",
+    largeBud: "Grosse Knospe", openShootBlossoms: "Offene Triebspitzen-Blueten",
+    growth: "Wachstum",
+  },
+  en: {
+    value: "Value", save: "Save", cancel: "Cancel", back: "Back",
+    done: "Done", quit: "Quit", current: "Current", style: "Style",
+    colors: "Colors", background: "Background", branches: "Branches",
+    blossoms: "Blossoms", sun: "Sun", ground: "Ground",
+    sunOn: "Enable sun", sunOff: "Disable sun",
+    previewSize: "Preview size", newTreeShape: "New tree shape",
+    resetPhase: "Reset phase", loadDefaults: "Load defaults",
+    settings: "Settings", currentPreview: "Current preview",
+    showNextStep: "Show next growth step", preview: "Preview",
+    currentPhase: "Current phase", yes: "Yes", no: "No", hexLike: "Hex like",
+    styleNatural: "Natural", styleMinimal: "Minimal",
+    styleOrnamental: "Ornamental", bareTree: "Bare tree",
+    fallingPetals: "Falling petals", maxBloom: "Maximum bloom",
+    shootsGrowing: "Shoots growing", shootsDone: "Shoots done",
+    dotOnShoot: "Dot on shoot", smallBud: "Small bud",
+    largeBud: "Large bud", openShootBlossoms: "Open shoot-tip blossoms",
+    growth: "Growth",
+  },
+  ja: {
+    value: "値", save: "保存", cancel: "キャンセル", back: "戻る",
+    done: "完了", quit: "終了", current: "現在", style: "スタイル",
+    colors: "色", background: "背景", branches: "枝",
+    blossoms: "花", sun: "太陽", ground: "地面",
+    sunOn: "太陽を表示", sunOff: "太陽を非表示",
+    previewSize: "プレビューサイズ", newTreeShape: "新しい木の形",
+    resetPhase: "フェーズをリセット", loadDefaults: "初期値に戻す",
+    settings: "設定", currentPreview: "現在のプレビュー",
+    showNextStep: "次の成長段階を表示", preview: "プレビュー",
+    currentPhase: "現在のフェーズ", yes: "はい", no: "いいえ", hexLike: "例: ",
+    styleNatural: "ナチュラル", styleMinimal: "ミニマル",
+    styleOrnamental: "オーナメンタル", bareTree: "裸の木",
+    fallingPetals: "花びらが散る", maxBloom: "満開",
+    shootsGrowing: "新芽が成長中", shootsDone: "新芽が完成",
+    dotOnShoot: "芽の先端に点", smallBud: "小さなつぼみ",
+    largeBud: "大きなつぼみ", openShootBlossoms: "先端の花が開花",
+    growth: "成長中",
+  },
+  fr: {
+    value: "Valeur", save: "Enregistrer", cancel: "Annuler", back: "Retour",
+    done: "Terminé", quit: "Quitter", current: "Actuel", style: "Style",
+    colors: "Couleurs", background: "Arrière-plan", branches: "Branches",
+    blossoms: "Fleurs", sun: "Soleil", ground: "Sol",
+    sunOn: "Activer le soleil", sunOff: "Désactiver le soleil",
+    previewSize: "Taille de l'aperçu", newTreeShape: "Nouvelle forme d'arbre",
+    resetPhase: "Réinitialiser la phase", loadDefaults: "Charger les valeurs par défaut",
+    settings: "Paramètres", currentPreview: "Aperçu actuel",
+    showNextStep: "Afficher l'étape suivante", preview: "Aperçu",
+    currentPhase: "Phase actuelle", yes: "Oui", no: "Non", hexLike: "Hex ex. ",
+    styleNatural: "Naturel", styleMinimal: "Minimaliste",
+    styleOrnamental: "Ornemental", bareTree: "Arbre nu",
+    fallingPetals: "Pétales tombants", maxBloom: "Floraison maximale",
+    shootsGrowing: "Pousses en croissance", shootsDone: "Pousses terminées",
+    dotOnShoot: "Point sur la pousse", smallBud: "Petit bourgeon",
+    largeBud: "Gros bourgeon", openShootBlossoms: "Fleurs ouvertes en pointe",
+    growth: "Croissance",
+  },
+  es: {
+    value: "Valor", save: "Guardar", cancel: "Cancelar", back: "Volver",
+    done: "Hecho", quit: "Salir", current: "Actual", style: "Estilo",
+    colors: "Colores", background: "Fondo", branches: "Ramas",
+    blossoms: "Flores", sun: "Sol", ground: "Suelo",
+    sunOn: "Activar sol", sunOff: "Desactivar sol",
+    previewSize: "Tamaño de vista previa", newTreeShape: "Nueva forma de árbol",
+    resetPhase: "Reiniciar fase", loadDefaults: "Cargar valores predeterminados",
+    settings: "Ajustes", currentPreview: "Vista previa actual",
+    showNextStep: "Mostrar siguiente paso", preview: "Vista previa",
+    currentPhase: "Fase actual", yes: "Sí", no: "No", hexLike: "Hex ej. ",
+    styleNatural: "Natural", styleMinimal: "Minimalista",
+    styleOrnamental: "Ornamental", bareTree: "Árbol sin flores",
+    fallingPetals: "Pétalos cayendo", maxBloom: "Floración máxima",
+    shootsGrowing: "Brotes creciendo", shootsDone: "Brotes completos",
+    dotOnShoot: "Punto en brote", smallBud: "Brote pequeño",
+    largeBud: "Brote grande", openShootBlossoms: "Flores abiertas en punta",
+    growth: "Crecimiento",
+  },
+}
+
+const L = STRINGS[LANG] || STRINGS.de
+
 const DEFAULT_SETTINGS = {
   style: "natural",
   bgColor: "#fcf7f8",
@@ -79,7 +181,7 @@ const STAGES = [
 
 const STYLES = {
   natural: {
-    label: "Natuerlich",
+    label: L.styleNatural,
     crownWidth: 0.36,
     crownHeight: 0.28,
     targetCountSmall: 110,
@@ -93,7 +195,7 @@ const STYLES = {
     droopOuter: 0.18
   },
   minimal: {
-    label: "Minimalistisch",
+    label: L.styleMinimal,
     crownWidth: 0.30,
     crownHeight: 0.23,
     targetCountSmall: 80,
@@ -107,7 +209,7 @@ const STYLES = {
     droopOuter: 0.10
   },
   ornamental: {
-    label: "Ornamental",
+    label: L.styleOrnamental,
     crownWidth: 0.40,
     crownHeight: 0.31,
     targetCountSmall: 130,
@@ -886,16 +988,16 @@ function renderScene(stageIndex, settings, family) {
 
 function stageDescription(index) {
   const st = STAGES[index]
-  if (st.bare) return "Baum ohne Blueten"
-  if (st.petalBoost) return "Fallende Blueten"
-  if (st.maxBloom) return "Maximale Bluetenpracht"
-  if (st.shootProgress != null && st.shootProgress < 1) return "Triebe wachsen"
-  if (st.shoots && st.shootTipStage === 0) return "Triebe fertig"
-  if (st.shootTipStage === 1) return "Punkt an Trieb"
-  if (st.shootTipStage === 2) return "Kleine Knospe"
-  if (st.shootTipStage === 3) return "Grosse Knospe"
-  if (st.shootTipStage === 4 && st.shoots && !st.maxBloom) return "Offene Triebspitzen-Blueten"
-  return "Wachstum"
+  if (st.bare) return L.bareTree
+  if (st.petalBoost) return L.fallingPetals
+  if (st.maxBloom) return L.maxBloom
+  if (st.shootProgress != null && st.shootProgress < 1) return L.shootsGrowing
+  if (st.shoots && st.shootTipStage === 0) return L.shootsDone
+  if (st.shootTipStage === 1) return L.dotOnShoot
+  if (st.shootTipStage === 2) return L.smallBud
+  if (st.shootTipStage === 3) return L.largeBud
+  if (st.shootTipStage === 4 && st.shoots && !st.maxBloom) return L.openShootBlossoms
+  return L.growth
 }
 
 function makeWidget(settings, family, stageIndex) {
@@ -920,9 +1022,9 @@ async function promptText(title, message, value) {
   const a = new Alert()
   a.title = title
   a.message = message
-  a.addTextField("Wert", String(value))
-  a.addAction("Speichern")
-  a.addCancelAction("Abbrechen")
+  a.addTextField(L.value, String(value))
+  a.addAction(L.save)
+  a.addCancelAction(L.cancel)
   const result = await a.presentAlert()
   if (result === -1) return null
   return a.textFieldValue(0)
@@ -930,12 +1032,12 @@ async function promptText(title, message, value) {
 
 async function chooseStyle(settings) {
   const a = new Alert()
-  a.title = "Style"
-  a.message = `Aktuell: ${STYLES[settings.style].label}`
-  a.addAction("Natuerlich")
-  a.addAction("Minimalistisch")
-  a.addAction("Ornamental")
-  a.addCancelAction("Zurueck")
+  a.title = L.style
+  a.message = `${L.current}: ${STYLES[settings.style].label}`
+  a.addAction(L.styleNatural)
+  a.addAction(L.styleMinimal)
+  a.addAction(L.styleOrnamental)
+  a.addCancelAction(L.back)
   const result = await a.presentSheet()
 
   if (result === 0) settings.style = "natural"
@@ -946,12 +1048,12 @@ async function chooseStyle(settings) {
 
 async function choosePreviewFamily(settings) {
   const a = new Alert()
-  a.title = "Vorschaugroesse"
-  a.message = `Aktuell: ${settings.previewFamily}`
+  a.title = L.previewSize
+  a.message = `${L.current}: ${settings.previewFamily}`
   a.addAction("Small")
   a.addAction("Medium")
   a.addAction("Large")
-  a.addCancelAction("Zurueck")
+  a.addCancelAction(L.back)
   const result = await a.presentSheet()
 
   if (result === 0) settings.previewFamily = "small"
@@ -963,41 +1065,41 @@ async function choosePreviewFamily(settings) {
 async function editColors(settings) {
   while (true) {
     const a = new Alert()
-    a.title = "Farben"
+    a.title = L.colors
     a.message =
-      `Hintergrund: ${settings.bgColor}\n` +
-      `Aeste: ${settings.branchColor}\n` +
-      `Blueten: ${settings.blossomColor}\n` +
-      `Sonne: ${settings.sunColor}\n` +
-      `Boden: ${settings.groundColor}`
-    a.addAction("Hintergrund")
-    a.addAction("Aeste")
-    a.addAction("Blueten")
-    a.addAction("Sonne")
-    a.addAction("Boden")
-    a.addCancelAction("Zurueck")
+      `${L.background}: ${settings.bgColor}\n` +
+      `${L.branches}: ${settings.branchColor}\n` +
+      `${L.blossoms}: ${settings.blossomColor}\n` +
+      `${L.sun}: ${settings.sunColor}\n` +
+      `${L.ground}: ${settings.groundColor}`
+    a.addAction(L.background)
+    a.addAction(L.branches)
+    a.addAction(L.blossoms)
+    a.addAction(L.sun)
+    a.addAction(L.ground)
+    a.addCancelAction(L.back)
 
     const result = await a.presentSheet()
     if (result === -1) break
 
     if (result === 0) {
-      const v = await promptText("Hintergrund", "Hex wie #fcf7f8", settings.bgColor)
+      const v = await promptText(L.background, `${L.hexLike} #fcf7f8`, settings.bgColor)
       if (v !== null) settings.bgColor = normalizeHex(v, settings.bgColor)
     }
     if (result === 1) {
-      const v = await promptText("Aeste", "Hex wie #111111", settings.branchColor)
+      const v = await promptText(L.branches, `${L.hexLike} #111111`, settings.branchColor)
       if (v !== null) settings.branchColor = normalizeHex(v, settings.branchColor)
     }
     if (result === 2) {
-      const v = await promptText("Blueten", "Hex wie #d98aa0", settings.blossomColor)
+      const v = await promptText(L.blossoms, `${L.hexLike} #d98aa0`, settings.blossomColor)
       if (v !== null) settings.blossomColor = normalizeHex(v, settings.blossomColor)
     }
     if (result === 3) {
-      const v = await promptText("Sonne", "Hex wie #e35b5b", settings.sunColor)
+      const v = await promptText(L.sun, `${L.hexLike} #e35b5b`, settings.sunColor)
       if (v !== null) settings.sunColor = normalizeHex(v, settings.sunColor)
     }
     if (result === 4) {
-      const v = await promptText("Boden", "Hex wie #cbb7b1", settings.groundColor)
+      const v = await promptText(L.ground, `${L.hexLike} #cbb7b1`, settings.groundColor)
       if (v !== null) settings.groundColor = normalizeHex(v, settings.groundColor)
     }
 
@@ -1053,22 +1155,22 @@ async function openSettingsMenu(settings) {
   while (true) {
     const currentPhase = loadPhaseIndex()
     const a = new Alert()
-    a.title = "Einstellungen"
+    a.title = L.settings
     a.message =
-      `Style: ${STYLES[settings.style].label}\n` +
-      `Sonne: ${settings.showSun ? "Ja" : "Nein"}\n` +
-      `Vorschau: ${settings.previewFamily}\n` +
+      `${L.style}: ${STYLES[settings.style].label}\n` +
+      `${L.sun}: ${settings.showSun ? L.yes : L.no}\n` +
+      `${L.preview}: ${settings.previewFamily}\n` +
       `Seed: ${settings.seed}\n` +
       `Phase: ${currentPhase + 1}/${STAGES.length}\n` +
       `${stageDescription(currentPhase)}`
-    a.addAction("Style")
-    a.addAction("Farben")
-    a.addAction(settings.showSun ? "Sonne ausschalten" : "Sonne einschalten")
-    a.addAction("Vorschaugroesse")
-    a.addAction("Neue Baumform")
-    a.addAction("Phase zuruecksetzen")
-    a.addAction("Standardwerte laden")
-    a.addCancelAction("Fertig")
+    a.addAction(L.style)
+    a.addAction(L.colors)
+    a.addAction(settings.showSun ? L.sunOff : L.sunOn)
+    a.addAction(L.previewSize)
+    a.addAction(L.newTreeShape)
+    a.addAction(L.resetPhase)
+    a.addAction(L.loadDefaults)
+    a.addCancelAction(L.done)
 
     const result = await a.presentSheet()
     if (result === -1) break
@@ -1089,15 +1191,15 @@ async function mainMenu(settings) {
     const a = new Alert()
     a.title = "Sakura Widget"
     a.message =
-      `Style: ${STYLES[settings.style].label}\n` +
-      `Sonne: ${settings.showSun ? "Ja" : "Nein"}\n` +
-      `Vorschau: ${settings.previewFamily}\n` +
-      `Aktuelle Phase: ${currentPhase + 1}/${STAGES.length}\n` +
+      `${L.style}: ${STYLES[settings.style].label}\n` +
+      `${L.sun}: ${settings.showSun ? L.yes : L.no}\n` +
+      `${L.preview}: ${settings.previewFamily}\n` +
+      `${L.currentPhase}: ${currentPhase + 1}/${STAGES.length}\n` +
       `${stageDescription(currentPhase)}`
-    a.addAction("Aktuelle Vorschau")
-    a.addAction("Naechsten Wachstumsschritt zeigen")
-    a.addAction("Einstellungen")
-    a.addCancelAction("Beenden")
+    a.addAction(L.currentPreview)
+    a.addAction(L.showNextStep)
+    a.addAction(L.settings)
+    a.addCancelAction(L.quit)
 
     const result = await a.presentSheet()
     if (result === -1) return
